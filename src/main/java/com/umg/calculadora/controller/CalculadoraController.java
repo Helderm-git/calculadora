@@ -37,14 +37,7 @@ public class CalculadoraController {
 
     @GetMapping("/historial")
     public List<Operacion> obtenerHistorial() {
-        List<Operacion> operaciones = calculadoraService.obtenerHistorial();
 
-        operaciones.forEach(operacion -> {
-            System.out.println("***********************");
-            System.out.println();
-            System.out.println("***********************");
-        });
-
-        return operaciones;
+        return calculadoraService.obtenerHistorial();
     }
 }
